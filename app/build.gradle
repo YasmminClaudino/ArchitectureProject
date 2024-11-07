@@ -1,6 +1,12 @@
+plugins {
+    id 'com.google.devtools.ksp' version '1.8.10-1.0.9' apply false
+}
+
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
-apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-parcelize'
+apply plugin: 'com.google.devtools.ksp'
+
 
 android {
     namespace "com.picpay.desafio.android"
@@ -58,7 +64,7 @@ dependencies {
     implementation "io.insert-koin:koin-androidx-compose:$koin_version"
 
     implementation "com.google.dagger:dagger:$dagger_version"
-    kapt "com.google.dagger:dagger-compiler:$dagger_version"
+ //   ksp "com.google.dagger:dagger-compiler:$dagger_version"
 
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"
