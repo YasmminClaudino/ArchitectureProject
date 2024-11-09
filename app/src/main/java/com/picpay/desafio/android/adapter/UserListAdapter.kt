@@ -1,9 +1,11 @@
-package com.picpay.desafio.android
+package com.picpay.desafio.android.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
+import com.picpay.desafio.android.ui.UserListDiffCallback
+import com.picpay.desafio.android.holder.UserListItemViewHolder
 import com.picpay.desafio.android.databinding.ListItemUserBinding
 import com.picpay.desafio.user.data.model.UserResponse
 
