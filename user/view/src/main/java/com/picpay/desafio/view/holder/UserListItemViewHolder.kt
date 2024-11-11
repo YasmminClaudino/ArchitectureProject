@@ -15,17 +15,21 @@ class UserListItemViewHolder(
     fun bind(user: UserResponse) {
         binding.name.text = user.name
         binding.username.text = user.username
-        binding.progressBar.visibility = View.VISIBLE
+        progressBarVisibility(true)
         Picasso.get()
             .load(user.img)
             .error(R.drawable.ic_round_account_circle)
             .into(binding.picture, object : Callback {
                 override fun onSuccess() {
-                    binding.progressBar.visibility = View.GONE
+                    progressBarVisibility(false)
                 }
                 override fun onError(e: Exception) {
-                    binding.progressBar.visibility = View.GONE
+                    progressBarVisibility(false)
                 }
             })
+    }
+
+    private fun progressBarVisibility(isVisible: Boolean) {
+        binding.progressBar.visibility = if (isVisible) View.VISIBLE else View.GONE
     }
 }

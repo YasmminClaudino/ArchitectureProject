@@ -30,4 +30,9 @@ class UserViewModel(
         }
     }
 
+    override fun onCleared() {
+        super.onCleared()
+        repository.clearCacheUsers()
+    }
+
 }
