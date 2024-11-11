@@ -15,20 +15,15 @@ class UserViewModel(
     private val _users = MutableLiveData<List<UserResponse>>()
     val users: LiveData<List<UserResponse>> = _users
 
-    private val _error = MutableLiveData<String?>()
-    val error: LiveData<String?> = _error
-
-    private var isDataLoaded = false
+    private val _error = MutableLiveData<String>()
+    val error: LiveData<String> = _error
 
     fun fetchUsers() {
-
-        if (isDataLoaded) return
 
         viewModelScope.launch {
             try {
                 val userList = repository.getUsers()
                 _users.postValue(userList)
-                isDataLoaded = true
             } catch (e: Exception) {
                 _error.postValue(e.message)
             }

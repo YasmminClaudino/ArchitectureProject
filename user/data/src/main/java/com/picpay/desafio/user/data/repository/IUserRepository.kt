@@ -4,4 +4,5 @@ import com.picpay.desafio.user.data.model.UserResponse
 
 interface IUserRepository {
     suspend fun getUsers(): List<UserResponse>
+    fun clearCacheUsers()
 }

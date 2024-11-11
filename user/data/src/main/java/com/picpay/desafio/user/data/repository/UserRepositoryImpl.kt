@@ -9,4 +9,8 @@ class UserRepositoryImpl(
     override suspend fun getUsers(): List<UserResponse> {
         return dataSource.getUsers()
     }
+
+    override fun clearCacheUsers() {
+        dataSource.clearCacheUsers()
+    }
 }

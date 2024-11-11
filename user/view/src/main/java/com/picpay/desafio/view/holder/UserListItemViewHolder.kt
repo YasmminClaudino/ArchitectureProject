@@ -23,8 +23,7 @@ class UserListItemViewHolder(
                 override fun onSuccess() {
                     binding.progressBar.visibility = View.GONE
                 }
-
-                override fun onError(e: Exception?) {
+                override fun onError(e: Exception) {
                     binding.progressBar.visibility = View.GONE
                 }
             })
