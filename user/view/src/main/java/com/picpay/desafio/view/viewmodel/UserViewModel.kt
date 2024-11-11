@@ -1,4 +1,4 @@
-package com.picpay.desafio.view.model
+package com.picpay.desafio.view.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

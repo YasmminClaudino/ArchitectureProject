@@ -7,7 +7,7 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.picpay.desafio.view.adapter.UserListAdapter
 import com.picpay.desafio.view.databinding.ContactsFragmentBinding
-import com.picpay.desafio.view.model.UserViewModel
+import com.picpay.desafio.view.viewmodel.UserViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class ContactsFragment: Fragment(R.layout.contacts_fragment) {
