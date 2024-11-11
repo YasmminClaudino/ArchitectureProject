@@ -9,7 +9,7 @@ apply plugin: 'com.google.devtools.ksp'
 
 android {
     namespace 'com.picpay.desafio.user.data'
-    compileSdk 34
+    compileSdk 35
 
     defaultConfig {
         minSdk 29
@@ -53,6 +53,7 @@ dependencies {
     implementation "androidx.room:room-ktx:$room_version"
 
     implementation "com.google.code.gson:gson:$gson_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
 
     testImplementation "junit:junit:$junit_version"
     testImplementation "org.mockito:mockito-core:$mockito_version"

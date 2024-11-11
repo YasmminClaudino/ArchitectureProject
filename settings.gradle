@@ -1,6 +1,5 @@
 include ':app'
 include ':core'
-include ':core:network'
 include ':core:loader'
 include ':user'
 include ':user:data'

@@ -2,7 +2,7 @@ package com.picpay.desafio.android
 
 import android.app.Application
 import com.picpay.desafio.view.di.UserViewModuleLoader
-import com.picpay.desafio.core.network.Network
+import com.picpay.desafio.user.data.di.NetworkDataModuleLoader
 import com.picpay.desafio.user.data.di.UserDataModuleLoader
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
@@ -21,7 +21,7 @@ class DesafioApplication: Application() {
             androidContext(this@DesafioApplication)
             val moduleLoader = listOf(
                 UserViewModuleLoader,
-                Network,
+                NetworkDataModuleLoader,
                 UserDataModuleLoader
             )
             moduleLoader.forEach {

@@ -20,3 +20,9 @@ Com o passar do tempo identificamos alguns problemas que impedem esse aplicativo
 Boa sorte! =)
 
 Ps.: Fique à vontade para editar o projeto inteiro, organização de pastas e módulos, bem como as dependências utilizadas
+
+
+# Ações futuras
+- Implementar testes unitários para as novas camadas criads. Atualmente, os testes foram implementados apenas na camada de dado, devido ao tempo apertado, optei por a cobertura da camada de dados para garantir que as chamadas à API retornassem os resultados esperados.
+- Implementar testes instrumentados para todas as camadas.
+
