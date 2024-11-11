@@ -10,8 +10,7 @@ import org.koin.core.context.loadKoinModules
 import org.koin.dsl.module
 import retrofit2.Retrofit
 
-
-object DataModuleLoader: ModuleLoader {
+object UserDataModuleLoader: ModuleLoader {
 
     private val dataModuleLoader = module {
         single<IUserRepository> { UserRepositoryImpl(get()) }

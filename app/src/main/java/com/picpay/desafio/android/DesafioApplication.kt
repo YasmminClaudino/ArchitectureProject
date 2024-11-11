@@ -1,9 +1,9 @@
 package com.picpay.desafio.android
 
 import android.app.Application
-import com.picpay.desafio.android.di.AppModuleLoader
+import com.picpay.desafio.view.di.UserViewModuleLoader
 import com.picpay.desafio.core.network.Network
-import com.picpay.desafio.user.data.di.DataModuleLoader
+import com.picpay.desafio.user.data.di.UserDataModuleLoader
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
@@ -20,9 +20,9 @@ class DesafioApplication: Application() {
             androidLogger()
             androidContext(this@DesafioApplication)
             val moduleLoader = listOf(
-                AppModuleLoader,
+                UserViewModuleLoader,
                 Network,
-                DataModuleLoader
+                UserDataModuleLoader
             )
             moduleLoader.forEach {
                 it.loadKoinModule()

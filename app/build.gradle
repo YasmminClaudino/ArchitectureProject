@@ -1,5 +1,5 @@
 plugins {
-    id 'com.google.devtools.ksp' version '1.8.10-1.0.9' apply false
+    id 'com.google.devtools.ksp' version "1.9.25-1.0.20" apply false
 }
 
 apply plugin: 'com.android.application'
@@ -51,7 +51,9 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation project(":core:network")
     implementation project(":core:loader")
+    implementation project(":core:resources")
     implementation project(":user:data")
+    implementation project(":user:view")
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
@@ -81,7 +83,9 @@ dependencies {
     implementation "io.reactivex.rxjava2:rxandroid:$rxandroid_version"
 
     implementation "com.squareup.picasso:picasso:$picasso_version"
-    implementation "de.hdodenhof:circleimageview:$circleimageview_version"
+
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
 
     testImplementation "junit:junit:$junit_version"
     testImplementation "org.mockito:mockito-core:$mockito_version"
