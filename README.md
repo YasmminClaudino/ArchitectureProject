@@ -23,6 +23,6 @@ Ps.: Fique à vontade para editar o projeto inteiro, organização de pastas e m
 
 
 # Ações futuras
-- Implementar testes unitários para as novas camadas criads. Atualmente, os testes foram implementados apenas na camada de dado, devido ao tempo apertado, optei por a cobertura da camada de dados para garantir que as chamadas à API retornassem os resultados esperados.
+- Implementar testes unitários para as novas camadas criadas. Atualmente, os testes foram implementados apenas na camada de dados, devido ao tempo apertado. Optei pela cobertura da camada de dados para garantir que as chamadas à API retornassem os resultados esperados.
 - Implementar testes instrumentados para todas as camadas.
 
